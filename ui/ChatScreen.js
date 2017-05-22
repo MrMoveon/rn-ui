@@ -3,9 +3,7 @@ import {View,Text} from 'react-native';
 class ChatScreen extends Component{  
     static navigationOptions = {  
         title:'Chat with Lucy',  
-        header:<View>  
-                <Text>HEADER</Text>  
-            </View>,
+        header:<Text>heool</Text>,
         headerTintColor: 'blue',
     };  
     render(){  

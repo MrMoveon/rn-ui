@@ -1,32 +1,15 @@
 import React from 'react';  
-import {  
-    AppRegistry,  
+import {   
     Text,View,Button,  
 } from 'react-native';  
 import { StackNavigator } from 'react-navigation';  
-import ChatScreen from './ChatScreen';  
-class HomeScreen extends React.Component {  
-    static navigationOptions = {  
-        title: '首页',//设置标题内容  
-    };  
-  
-    render() {  
-        const { navigate } = this.props.navigation;  
-        return (  
-            <View>  
-                <Text>Hello, Navigation!</Text>  
-                <Button  
-                    onPress={() => navigate('Chat',{user:'我是chat'})}  
-                    title="Chat with Lucy"/>  
-            </View>  
-        );  
-    }  
-}  
-  
+import ChatScreen from './page/ChatScreen';  
+import HomeScreen from './page/HomeScreen';  
 const SimpleApp = StackNavigator({  
     Home: {screen: HomeScreen},  
     Chat:{screen:ChatScreen},  
-  
+},{
+    mode:'modal'
 });  
-  
+ 
 export default SimpleApp;  
